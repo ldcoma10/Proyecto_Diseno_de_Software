@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Proyecto_Diseño.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Tourist App</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body onpageshow="if (event.persisted) Atras();">
+    <div class="container" runat="server">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+    </div>   
+
+       <div class="container" runat="server">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">        
+        </asp:ContentPlaceHolder>
+    </div> 
+
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type='text/javascript'>
+        window.onload = function () {
+            Atras();
+        }
+        function Atras() {
+            window.history.forward();
+        }
+    </script>
+   
+    
+    
+</body>
+</html>
